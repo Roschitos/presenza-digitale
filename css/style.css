@@ -1,0 +1,170 @@
+/* ===== RESET & BASE ===== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", Arial, sans-serif;
+}
+
+body {
+    background-color: #f2f4f7;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* ===== HEADER / HERO ===== */
+
+.hero {
+    background: linear-gradient(135deg, #1f2a44, #2f3f66);
+    color: #ffffff;
+    padding: 60px 20px;
+}
+
+.hero-content {
+    max-width: 900px;
+    margin: auto;
+}
+
+.hero h1 {
+    font-size: 2.4rem;
+    margin-bottom: 15px;
+}
+
+.hero-subtitle {
+    font-size: 1.15rem;
+    max-width: 700px;
+    opacity: 0.9;
+}
+
+/* ===== MAIN LAYOUT ===== */
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* ===== CARD BASE ===== */
+
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 22px 26px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== CARD HEADER (TITOLO + INDICATORE) ===== */
+
+.card-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card h2 {
+    font-size: 1.4rem;
+    color: #1f2a44;
+}
+
+/* indicatore + / - */
+.indicator {
+    width: 18px;
+    height: 18px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.indicator::before,
+.indicator::after {
+    content: "";
+    position: absolute;
+    background-color: #1f2a44;
+    transition: opacity 0.3s ease;
+}
+
+/* linea orizzontale */
+.indicator::before {
+    width: 100%;
+    height: 2px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+/* linea verticale */
+.indicator::after {
+    width: 2px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* card aperta → diventa "-" */
+.card.open .indicator::after {
+    opacity: 0;
+}
+
+/* ===== SOTTOTITOLO ===== */
+
+.subtitle {
+    font-size: 0.95rem;
+    color: #4caf93;
+    margin-bottom: 12px;
+}
+
+/* ===== CONTENUTO CARD (CHIUSA) ===== */
+
+.card .content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+/* ===== CONTENUTO CARD (APERTA) ===== */
+
+.card.open {
+    background-color: #f9fbfd;
+    border-left: 6px solid #4caf93;
+}
+
+.card.open .content {
+    margin-top: 16px;
+}
+
+.card.open .content p {
+    margin-bottom: 14px;
+    line-height: 1.7;
+    color: #2a2a2a;
+}
+
+/* ===== FOOTER ===== */
+
+footer {
+    background-color: #1f2a44;
+    color: #ffffff;
+    padding: 40px 20px;
+}
+
+.footer-content {
+    max-width: 900px;
+    margin: auto;
+}
+
+.footer-content p {
+    margin-bottom: 12px;
+}
+
+.footer-small {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
