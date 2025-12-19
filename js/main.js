@@ -26,35 +26,35 @@ cards.forEach(card => {
             content.style.maxHeight = content.scrollHeight + 'px';
             switch(card.id) {
                 case 'presenza':
-                    sfondo.style.backgroundImage = "url('https://i0.wp.com/www.webheroes.it/wp-content/uploads/2019/08/sviluppo-presenza-digitale.jpg?fit=1920%2C1280&ssl=1')";
+                    sfondo.style.backgroundImage = "url('img/presenza_digitale.webp')";
                     sfondo.style.backgroundSize = 'cover';
                     sfondo.style.backgroundPosition = 'center';
                     sfondo.style.backgroundRepeat = 'no-repeat';
                     sfondo.style.backgroundColor = 'transparent';
                     break;
                 case 'analisi':
-                    sfondo.style.backgroundImage = "url('https://leasenews.it/storage/app/uploads/public/615/858/76e/61585876e6430474256868.jpeg')";
+                    sfondo.style.backgroundImage = "url('img/analisi_profili.jpg')";
                     sfondo.style.backgroundSize = 'cover';
                     sfondo.style.backgroundPosition = 'center';
                     sfondo.style.backgroundRepeat = 'no-repeat';
                     sfondo.style.backgroundColor = 'transparent';
                     break;
                 case 'dati':
-                    sfondo.style.backgroundImage = "url('https://leasenews.it/storage/app/uploads/public/615/858/76e/61585876e6430474256868.jpeg')";
+                    sfondo.style.backgroundImage = "url('img/dati_condivisi.jpeg')";
                     sfondo.style.backgroundSize = 'cover';
                     sfondo.style.backgroundPosition = 'center';
                     sfondo.style.backgroundRepeat = 'no-repeat';
                     sfondo.style.backgroundColor = 'transparent';
                     break;
                 case 'vulnerabilita':
-                    sfondo.style.backgroundImage = "url('https://dnewpydm90vfx.cloudfront.net/wp-content/uploads/2019/02/Identit%C3%A0-digitale.jpg')";
+                    sfondo.style.backgroundImage = "url('img/vulnerabilita_digitale.jpg')";
                     sfondo.style.backgroundSize = 'cover';
                     sfondo.style.backgroundPosition = 'center';
                     sfondo.style.backgroundRepeat = 'no-repeat';
                     sfondo.style.backgroundColor = 'transparent';
                     break;
                 case 'miglioramento':
-                    sfondo.style.backgroundImage = "url('https://dhamzv23wqk2g.cloudfront.net/wp-content/uploads/2022/10/03171825/competenze-digitali-digital-skill.jpg')";
+                    sfondo.style.backgroundImage = "url('img/piano_miglioramento.jpg')";
                     sfondo.style.backgroundSize = 'cover';
                     sfondo.style.backgroundPosition = 'center';
                     sfondo.style.backgroundRepeat = 'no-repeat';
