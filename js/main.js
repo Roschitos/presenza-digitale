@@ -1,6 +1,7 @@
 'use strict';
 
 const cards = document.querySelectorAll('.card');
+const sfondo = document.getElementById('sfondo');
 
 cards.forEach(card => {
     const content = card.querySelector('.content');
@@ -12,7 +13,12 @@ cards.forEach(card => {
         cards.forEach(c => {
             c.classList.remove('open');
             c.querySelector('.content').style.maxHeight = '0';
-            document.body.style.backgroundColor = '#ffffffff'; // colore di default
+            // reset sfondo
+            sfondo.style.backgroundImage = 'none';
+            sfondo.style.backgroundColor = '#f2f4f7';
+            sfondo.style.backgroundSize = '';
+            sfondo.style.backgroundPosition = '';
+            sfondo.style.backgroundRepeat = '';
         });
         
         if (!isOpen) {
@@ -20,22 +26,43 @@ cards.forEach(card => {
             content.style.maxHeight = content.scrollHeight + 'px';
             switch(card.id) {
                 case 'presenza':
-                    document.body.style.backgroundColor = '#ffe4e1'; // colore per Presenza
+                    sfondo.style.backgroundImage = "url('https://i0.wp.com/www.webheroes.it/wp-content/uploads/2019/08/sviluppo-presenza-digitale.jpg?fit=1920%2C1280&ssl=1')";
+                    sfondo.style.backgroundSize = 'cover';
+                    sfondo.style.backgroundPosition = 'center';
+                    sfondo.style.backgroundRepeat = 'no-repeat';
+                    sfondo.style.backgroundColor = 'transparent';
                     break;
                 case 'analisi':
-                    document.body.style.backgroundColor = '#e0f7fa'; // colore per Analisi
+                    sfondo.style.backgroundImage = "url('https://leasenews.it/storage/app/uploads/public/615/858/76e/61585876e6430474256868.jpeg')";
+                    sfondo.style.backgroundSize = 'cover';
+                    sfondo.style.backgroundPosition = 'center';
+                    sfondo.style.backgroundRepeat = 'no-repeat';
+                    sfondo.style.backgroundColor = 'transparent';
                     break;
                 case 'dati':
-                    document.body.style.backgroundColor = '#fff8e1'; // colore per Dati
+                    sfondo.style.backgroundImage = "url('https://leasenews.it/storage/app/uploads/public/615/858/76e/61585876e6430474256868.jpeg')";
+                    sfondo.style.backgroundSize = 'cover';
+                    sfondo.style.backgroundPosition = 'center';
+                    sfondo.style.backgroundRepeat = 'no-repeat';
+                    sfondo.style.backgroundColor = 'transparent';
                     break;
                 case 'vulnerabilita':
-                    document.body.style.backgroundColor = '#f3e5f5'; // colore per Vulnerabilità
+                    sfondo.style.backgroundImage = "url('https://dnewpydm90vfx.cloudfront.net/wp-content/uploads/2019/02/Identit%C3%A0-digitale.jpg')";
+                    sfondo.style.backgroundSize = 'cover';
+                    sfondo.style.backgroundPosition = 'center';
+                    sfondo.style.backgroundRepeat = 'no-repeat';
+                    sfondo.style.backgroundColor = 'transparent';
                     break;
                 case 'miglioramento':
-                    document.body.style.backgroundColor = '#e8f5e9'; // colore per Miglioramento
+                    sfondo.style.backgroundImage = "url('https://dhamzv23wqk2g.cloudfront.net/wp-content/uploads/2022/10/03171825/competenze-digitali-digital-skill.jpg')";
+                    sfondo.style.backgroundSize = 'cover';
+                    sfondo.style.backgroundPosition = 'center';
+                    sfondo.style.backgroundRepeat = 'no-repeat';
+                    sfondo.style.backgroundColor = 'transparent';
                     break;
                 default:
-                    document.body.style.backgroundColor = '#ffffffff'; // colore default
+                    sfondo.style.backgroundImage = 'none';
+                    sfondo.style.backgroundColor = '#f2f4f7';
             }
         }
     });
